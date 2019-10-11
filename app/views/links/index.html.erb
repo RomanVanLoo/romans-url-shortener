@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <h1 class="main-title">Roman's URL shortener</h1>
+  <div class="main-url-insert">
+    <%= form_with model: @link, url: save_link_path, as: :post do |f| %>
+      <div class="flex-row">
+        <p class="preprinted-url">www.romansurl.com/</p>
+        <%= f.text_field :short_url, class: "main-short-url" %>
+      </div>
+      <i class="fas fa-angle-double-down main-redirect-to"></i>
+      <h2 class="main-redirect-to">Redirect To</h2>
+      <i class="fas fa-angle-double-down main-redirect-to"></i>
+      <%= f.text_field :long_url, class: "main-long-url" %>
+      <%= f.submit "Short It", class: "submit-btn" %>
+    <% end %>
+  </div>
+</div>
