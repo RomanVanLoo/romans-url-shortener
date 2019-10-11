@@ -6,6 +6,14 @@ body {
   margin: 0;
   color: white;
   font-family: "Roboto";
+  font-weight: 300;
+}
+
+input {
+  color: white;
+  font-size: 25px;
+  padding-left: 10px;
+  font-weight: 100;
 }
 
 .wrapper {
@@ -16,53 +24,86 @@ body {
   height: 100vh;
   align-items: center;
   justify-content: center;
-  background-image: url(landscape.jpg); /* fallback */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.36), rgba(0, 0, 0, 0.45)), url(landscape.jpg;);
+  background-image: url("landscape.jpg");
+  /* fallback */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.36), rgba(0, 0, 0, 0.65)), url("landscape.jpg;");
   background-size: cover;
 }
 
 .main-title {
   font-size: 30px;
   font-size: 50px;
-  margin-bottom: 15vh;
+  margin-bottom: 10vh;
 }
 
 .main-url-insert {
   display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  color: white;
 }
 
 .flex-row {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.flex-row-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 30px;
+  align-items: center;
 }
 
 .preprinted-url {
-  font-size: 20px;
   margin: 0;
 }
 
 .main-short-url {
   height: 20px;
-  background-color: rgba(255,255,255,80%);
+  background-color: rgba(255,255,255,0.3);
   border: none;
+  height: 35px;
+  margin-left: 15px;
+  width: 200px;
+  border-radius: 5px;
+}
+
+.redirect {
+  justify-content: center;
+  font-size: 30px;
 }
 
 .main-redirect-to {
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
+  margin: 30px 15px;
 }
 
 .main-long-url {
   width: 30vw;
   max-width: 300px;
   min-width: 100px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  height: 35px;
+  margin-left: 15px;
+  border-radius: 5px;
+  margin-bottom: 30px;
 }
 
 .submit-btn {
-  width: 70px;
   border-radius: 5px;
-  height: 20px;
-  font-size: 15px;
-  background-color: #00F788;
+  width: 200px;
+  height: 50px;
+  font-size: 25px;
+  background: none;
+  color: white;
+  border: 1px solid white;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
 }
