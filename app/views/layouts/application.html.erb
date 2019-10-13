@@ -12,6 +12,12 @@
 
   <body>
     <div class="wrapper" style="background-image: linear-gradient(rgba(0, 0, 0, 0.36), rgba(0, 0, 0, 0.65)), url('https://res.cloudinary.com/ddngbvo3j/image/upload/v1570992875/giyvcxffmcfckyokyu7x.jpg');" >
+      <% if notice %>
+      <p class="alert alert-success notice"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+      <p class="alert alert-danger notice"><%= alert %></p>
+      <% end %>
       <div class="devise-btns">
         <% if user_signed_in? %>
           <%= link_to "View your links", root_path, class: 'navbar-link' %>
@@ -21,12 +27,6 @@
           <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
         <% end %>
       </div>
-      <% if notice %>
-        <p class="alert alert-success"><%= notice %></p>
-      <% end %>
-      <% if alert %>
-        <p class="alert alert-danger"><%= alert %></p>
-      <% end %>
       <%= yield %>
     </div>
   </body>
