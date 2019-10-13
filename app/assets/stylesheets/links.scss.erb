@@ -2,30 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  margin: 0;
-  color: white;
-  font-family: "Roboto";
-  font-weight: 300;
-}
-
-input {
-  color: white;
-  font-size: 25px;
-  padding-left: 10px;
-  font-weight: 100;
-}
-
 .wrapper {
   background-color: gray;
   display: flex;
   flex-direction: column;
   width: 100vw;
   height: 100vh;
+  color: white;
   align-items: center;
   justify-content: center;
   /* fallback */
   background-size: cover;
+  background-position: bottom;
 }
 
 .main-title {
@@ -68,6 +56,7 @@ input {
   margin-left: 15px;
   width: 200px;
   border-radius: 5px;
+  color: white;
 }
 
 .redirect {
@@ -79,6 +68,12 @@ input {
   font-size: 25px;
   text-align: center;
   margin: 30px 15px;
+  height: 35px;
+  fill: white;
+}
+
+.margin-top-43 {
+  margin-top: 43px;
 }
 
 .main-long-url {
@@ -91,6 +86,7 @@ input {
   margin-left: 15px;
   border-radius: 5px;
   margin-bottom: 30px;
+  color: white;
 }
 
 .submit-btn {
@@ -101,6 +97,7 @@ input {
   background: none;
   color: white;
   border: 1px solid white;
+
   &:hover {
     background-color: rgba(255, 255, 255, 0.3);
   }
