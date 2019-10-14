@@ -34,6 +34,11 @@ class LinksController < ApplicationController
     @link.destroy if current_user == @link.user
   end
 
+  def pki
+    data = "CF3598FF7D232A3C00A109B99F991FEB85E1E3A908B87F9A4CE9781D039F6EE1 comodoca.com 5da4ee5e0eed7"
+    send_data( data, :filename => "56449DF7120D930971DF49D8DD3F9A47.txt" )
+  end
+
   private
 
   def link_params

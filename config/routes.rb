@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/.well-known/pki-validation/56449DF7120D930971DF49D8DD3F9A47.txt', to: 'links#pki'
   devise_for :users
   root to: 'links#index'
   post '/save_link', to: 'links#save'
