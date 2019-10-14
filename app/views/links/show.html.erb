@@ -1,12 +1,17 @@
 <div class="links-list">
   <% @links.each_with_index do |link, index| %>
     <div data-link-id="<%= link.id %>" class="link-item">
-      <p>Short Url: <%= link_to "romansurl.herokuapp.com/#{link.short_url }", redirect_link_path(short_url: link.short_url), data: { turbolinks: false } %></p>
-      <p>Redirect to: <a href="<%= link.long_url %>"><%= link.long_url %></a></p>
-      <p>Clicks: <%= link.clicks.count %></p>
+      <p>Short Url:
+        <%= link_to "romansurl.herokuapp.com/#{link.short_url }", redirect_link_path(short_url: link.short_url), data: { turbolinks: false } %></p>
+      <p>Redirect to:
+        <a href="<%= link.long_url %>"><%= link.long_url %></a>
+      </p>
+      <p data-count-link-id="click<%= link.id %>">Clicks:
+        <%= link.clicks.count %></p>
+      <p><%= link_to "Reset clicks", reset_clicks_path(id: link.id), method: :delete, remote: true %></p>
       <%= link_to delete_link_path(id: link.id), method: :delete, remote: true do %>
-        <i class="far fa-trash-alt"></i>
-      <% end %>
-    </div>
-  <% end %>
+      <i class="far fa-trash-alt"></i>
+    <% end %>
+  </div>
+<% end %>
 </div>
