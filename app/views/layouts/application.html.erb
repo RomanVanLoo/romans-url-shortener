@@ -8,6 +8,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag "application" %>
   </head>
 
   <body>
@@ -20,7 +21,8 @@
       <% end %>
       <div class="devise-btns">
         <% if user_signed_in? %>
-          <%= link_to "View your links", root_path, class: 'navbar-link' %>
+          <%= link_to "Add new link", root_path, class: 'navbar-link' %>
+          <%= link_to "View your links", no_redirect_links_path, class: 'navbar-link' %>
           <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'navbar-link'  %>
         <% else %>
           <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %>

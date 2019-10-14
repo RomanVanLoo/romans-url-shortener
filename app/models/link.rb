@@ -1,4 +1,6 @@
 class Link < ApplicationRecord
+  belongs_to :user, required: true
+  has_many :clicks, dependent: :destroy
   before_validation :smart_add_url_protocol
   validates :short_url, uniqueness: true
   validates :long_url, uniqueness: true
