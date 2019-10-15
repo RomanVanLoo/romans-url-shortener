@@ -8,6 +8,7 @@
       </p>
       <p data-count-link-id="click<%= link.id %>">Clicks:
         <%= link.clicks.count %></p>
+        <i class="fas fa-angle-double-left"></i>
       <p><%= link_to "Reset clicks", reset_clicks_path(id: link.id), method: :delete, remote: true %></p>
       <%= link_to delete_link_path(id: link.id), method: :delete, remote: true do %>
       <i class="far fa-trash-alt"></i>
