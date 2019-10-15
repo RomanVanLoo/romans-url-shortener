@@ -39,3 +39,18 @@ a:hover {
   color: #dbdbdb;
   top: 15px;
 }
+
+.footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.made-by {
+  color: #bbbbbb;
+  margin-right: 15px;
+}
