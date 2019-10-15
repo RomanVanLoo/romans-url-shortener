@@ -2,7 +2,7 @@
   <% @links.each_with_index do |link, index| %>
     <div data-link-id="<%= link.id %>" class="link-item">
       <p>Short Url:
-        <%= link_to "romansurl.herokuapp.com/#{link.short_url }", redirect_link_path(short_url: link.short_url), data: { turbolinks: false } %></p>
+        <%= link_to "romansurl.com/#{link.short_url }", redirect_link_path(short_url: link.short_url), data: { turbolinks: false } %></p>
       <p>Redirect to:
         <a href="<%= link.long_url %>"><%= link.long_url %></a>
       </p>
